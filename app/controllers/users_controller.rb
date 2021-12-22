@@ -5,3 +5,4 @@ class UsersController < Clearance::UsersController
     params.require(:user).permit(:username, :email, :password)
   end
 end
+
