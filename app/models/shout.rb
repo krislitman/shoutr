@@ -3,5 +3,12 @@ class Shout < ApplicationRecord
 
   validates :body, presence: true, length: { in: 1..144 }
   validates :user, presence: true
-end
 
+  delegate :username, to: :user
+
+  class << self
+    def order_by_created_at
+      order(created_at: :desc)
+    end
+  end
+end

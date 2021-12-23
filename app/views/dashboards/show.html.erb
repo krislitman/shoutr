@@ -5,8 +5,6 @@
   <%= f.submit "Shout!" %>
 <% end %>
 
-<% @shouts.each do |shout| %>
-  <div>
-    <%= shout.body %>
-  </div>
-<% end %>
+<hr>
+
+<%= render @shouts %>
